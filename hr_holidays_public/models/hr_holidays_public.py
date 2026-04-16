@@ -141,7 +141,7 @@ class HrHolidaysPublic(models.Model):
         # TODO: Drop function in next migration
         partner = False
         if employee_id is not None:
-            employee = self.env["hr.employee"].browse(employee_id)
+            employee = self.env["hr.employee.public"].browse(employee_id)
             partner = employee.address_id
         if partner_id:
             if partner:
